@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Access Denied | loukky</title>
+    <title>Access Denied</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <style>
@@ -257,21 +257,25 @@
             </div>
             <div class="divider"></div>
             <div class="empty-action">
-                <div>
-                    <a href="https://loukky.com">Home</a> 
-                </div>
+
             </div>
             <footer class="section section-footer">
-                <div id="copyright" class="grid-footer container grid-lg">©
-                    <span year></span>
+               <!-- <div id="copyright" class="grid-footer container grid-lg">©
+                    <span year></span> -->
                     <span class="text-error">♥</span>
-                    <a href="https://loukky.com" target="_blank">Loukky</a>
+					<span id="domainName"></span>
+                   <!-- <a href="https://loukky.com" target="_blank">Loukky</a> -->
                 </div>
             </footer>
         </div>
 
     </div>
-    <script>var copyrightNow = (new Date).getFullYear(), textContent = document.querySelector("span[year]"); copyrightSince = 2016, textContent.textContent = copyrightSince === copyrightNow ? copyrightNow : copyrightSince + " - " + copyrightNow;</script>
+	<script type="text/javascript">
+    window.onload = function runScript(){
+        document.getElementById("domainName").innerHTML = window.location.hostname;
+    };
+</script>
+   <!-- <script>var copyrightNow = (new Date).getFullYear(), textContent = document.querySelector("span[year]"); copyrightSince = 2016, textContent.textContent = copyrightSince === copyrightNow ? copyrightNow : copyrightSince + " - " + copyrightNow;</script> -->
 </body>
 
 </html>
